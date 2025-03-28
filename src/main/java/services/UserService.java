@@ -44,13 +44,7 @@ public class UserService implements IUserService {
     @Override
     public Optional<User> update(Long id, User user) {
         Optional<User> userOptional = repository.findById(id);
-        if(userOptional.isPresent()){
-            User userDb = userOptional.orElseThrow();
-            userDb.setName(user.getName());
-            userDb.setPassword(user.getPassword());
-            userDb.setEmail(user.getEmail());
-            return Optional.of(repository.save(userDb));
-        };
+        
         return userOptional;
     }
 }
