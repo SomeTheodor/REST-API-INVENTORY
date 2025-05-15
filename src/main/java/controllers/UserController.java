@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import entities.User;
-import services.UserService;
+import services.UserServiceImp;
 
 import java.util.List;
 import java.util.Optional;

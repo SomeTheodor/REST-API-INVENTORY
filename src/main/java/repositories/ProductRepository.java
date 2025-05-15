@@ -6,4 +6,5 @@ import entities.Product;
 
 public interface ProductRepository extends JpaRepository<Product,Long>{
     List<Product> findByNameContainingIgnoreCase(String name);
+    List<Product> findByStock(int limit);
 }
